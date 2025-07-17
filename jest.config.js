@@ -10,4 +10,11 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
+  reporters: [
+    'default',
+    ['jest-junit', {
+      outputDirectory: './test-results',
+      outputName: 'results.xml',
+    }]
+  ],
 };

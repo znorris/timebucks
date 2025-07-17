@@ -24,10 +24,7 @@ jobs:
       run: npm ci
     
     - name: Run tests
-      run: npm test -- --reporters=default --reporters=jest-junit
-      env:
-        JEST_JUNIT_OUTPUT_DIR: ./test-results/
-        JEST_JUNIT_OUTPUT_NAME: results.xml
+      run: npm test
     
     - name: Publish test results
       uses: dorny/test-reporter@v1
